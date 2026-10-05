@@ -1,0 +1,14 @@
+# Backend
+server/.env
+server/uploads/
+server/bin/
+
+# Frontend
+web/node_modules/
+web/.next/
+web/.env.local
+web/.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
