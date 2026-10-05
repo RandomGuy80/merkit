@@ -47,8 +47,9 @@ func main() {
 	app.Use(logger.New(logger.Config{
 		Format: "${time} | ${method} ${path} | ${status} | ${latency}\n",
 	}))
+	allowOrigins := cfg.FrontendURL + ",http://localhost:3000,http://localhost:5173"
 	app.Use(cors.New(cors.Config{
-		AllowOrigins:     "http://localhost:3000,http://localhost:5173",
+		AllowOrigins:     allowOrigins,
 		AllowMethods:     "GET,POST,PUT,PATCH,DELETE,OPTIONS",
 		AllowHeaders:     "Origin,Content-Type,Authorization",
 		AllowCredentials: true,
